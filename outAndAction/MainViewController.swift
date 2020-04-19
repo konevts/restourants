@@ -21,7 +21,13 @@ class MainViewController: UITableViewController {
         "Теремок",
         "Додо пицца"
     ]
+    lazy var places: [Place] = restourantNames.map(timesTen)
 
+    func timesTen(_ x:String) -> Place {
+        return Place(name: x , location: "String", type: "String", image: x)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,22 +35,22 @@ class MainViewController: UITableViewController {
     // MARK: - Table view data source
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return restourantNames.count
+        return places.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
-        cell.nameLabel?.text = restourantNames[indexPath.row]
-        cell.imageOfPlace?.image = UIImage(named: restourantNames[indexPath.row])
+        let placeForCell = places[indexPath.row]
+        cell.nameLabel?.text = placeForCell.name
+        cell.imageOfPlace?.image = UIImage(named: placeForCell.image)
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
+        
+        cell.locationLabel.text = placeForCell.location
+        cell.typeLabel.text = placeForCell.type
         cell.imageOfPlace?.clipsToBounds = true
         return cell
-    }
-    // MARK: - TableView deligate
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 85
     }
 
     /*
@@ -57,4 +63,8 @@ class MainViewController: UITableViewController {
     }
     */
 
+    
+    @IBAction func cancelAction(_ segue: UIStoryboardSegue){
+        
+    }
 }
