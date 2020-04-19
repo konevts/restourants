@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Fast Food Choiser-->
         <scene sceneID="WUW-IQ-SWy">
             <objects>
                 <tableViewController id="e55-31-uD8" customClass="MainViewController" customModule="outAndAction" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                             <outlet property="delegate" destination="e55-31-uD8" id="eMv-af-r3O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="hY0-Sm-maj"/>
+                    <navigationItem key="navigationItem" title="Fast Food Choiser" id="hY0-Sm-maj"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WuD-CP-MgT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -42,6 +42,9 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="W49-D7-lNQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SnellRoundhand-Bold" family="Snell Roundhand" pointSize="25"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="e55-31-uD8" kind="relationship" relationship="rootViewController" id="xrx-Um-vBj"/>

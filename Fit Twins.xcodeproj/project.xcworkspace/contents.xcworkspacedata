@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:outAndAction.xcodeproj">
+      location = "self:/Users/KOT/Desktop/outAndAction/Fit Twins.xcodeproj">
    </FileRef>
 </Workspace>

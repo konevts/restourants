@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		87412910244B41230065D0FA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		8766C37D2443612F00C53683 /* outAndAction.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = outAndAction.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8766C37D2443612F00C53683 /* Fit Twins.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fit Twins.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8766C3802443612F00C53683 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8766C3822443612F00C53683 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8766C3872443612F00C53683 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -48,7 +48,7 @@
 		8766C37E2443612F00C53683 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8766C37D2443612F00C53683 /* outAndAction.app */,
+				8766C37D2443612F00C53683 /* Fit Twins.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8766C37C2443612F00C53683 /* outAndAction */ = {
+		8766C37C2443612F00C53683 /* Fit Twins */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8766C3912443613000C53683 /* Build configuration list for PBXNativeTarget "outAndAction" */;
+			buildConfigurationList = 8766C3912443613000C53683 /* Build configuration list for PBXNativeTarget "Fit Twins" */;
 			buildPhases = (
 				8766C3792443612F00C53683 /* Sources */,
 				8766C37A2443612F00C53683 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = outAndAction;
+			name = "Fit Twins";
 			productName = outAndAction;
-			productReference = 8766C37D2443612F00C53683 /* outAndAction.app */;
+			productReference = 8766C37D2443612F00C53683 /* Fit Twins.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +102,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8766C3782443612F00C53683 /* Build configuration list for PBXProject "outAndAction" */;
+			buildConfigurationList = 8766C3782443612F00C53683 /* Build configuration list for PBXProject "Fit Twins" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +115,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8766C37C2443612F00C53683 /* outAndAction */,
+				8766C37C2443612F00C53683 /* Fit Twins */,
 			);
 		};
 /* End PBXProject section */
@@ -292,7 +292,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevstaf.outAndAction;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fit Twins";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -310,7 +310,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = kevstaf.outAndAction;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Fit Twins";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -319,7 +319,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8766C3782443612F00C53683 /* Build configuration list for PBXProject "outAndAction" */ = {
+		8766C3782443612F00C53683 /* Build configuration list for PBXProject "Fit Twins" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8766C38F2443613000C53683 /* Debug */,
@@ -328,7 +328,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8766C3912443613000C53683 /* Build configuration list for PBXNativeTarget "outAndAction" */ = {
+		8766C3912443613000C53683 /* Build configuration list for PBXNativeTarget "Fit Twins" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8766C3922443613000C53683 /* Debug */,
