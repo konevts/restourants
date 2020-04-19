@@ -24,7 +24,7 @@ class MainViewController: UITableViewController {
     lazy var places: [Place] = restourantNames.map(timesTen)
 
     func timesTen(_ x:String) -> Place {
-        return Place(name: x , location: "String", type: "String", image: x)
+        return Place(name: x , location: "String", type: "String", restaurantImage: x)
         
     }
     
@@ -43,8 +43,15 @@ class MainViewController: UITableViewController {
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! CustomTableViewCell
         let placeForCell = places[indexPath.row]
+        
+       
         cell.nameLabel?.text = placeForCell.name
-        cell.imageOfPlace?.image = UIImage(named: placeForCell.image)
+         if placeForCell.image == nil {
+        cell.imageOfPlace?.image = UIImage(named: placeForCell.restaurantImage!)
+        }
+         else{
+            cell.imageOfPlace?.image = placeForCell.image
+        }
         cell.imageOfPlace?.layer.cornerRadius = cell.imageOfPlace.frame.size.height / 2
         
         cell.locationLabel.text = placeForCell.location
@@ -63,8 +70,17 @@ class MainViewController: UITableViewController {
     }
     */
 
+    @IBAction func cancelAction(_ sender: Any) {
+        dismiss(animated: true)
+    }
     
-    @IBAction func cancelAction(_ segue: UIStoryboardSegue){
+    @IBAction func unwindSegue(_ segue: UIStoryboardSegue){
+        
+        guard let newPlaceVC = segue.source as? NewPlaceViewController else {return}
+        
+        newPlaceVC.saveNewPlace()
+        places.append(newPlaceVC.newPlace!)
+        tableView.reloadData()
         
     }
 }

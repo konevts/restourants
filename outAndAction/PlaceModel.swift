@@ -6,12 +6,13 @@
 //  Copyright © 2020 Konstantin Evstafev. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
 struct Place {
     
     var name: String
-    var location: String
-    var type: String
-    var image: String
+    var location: String?
+    var type: String?
+    var restaurantImage: String?
+    var image: UIImage?
 }
