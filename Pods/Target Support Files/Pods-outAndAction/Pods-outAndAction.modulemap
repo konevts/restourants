@@ -1,0 +1,6 @@
+module Pods_outAndAction {
+  umbrella header "Pods-outAndAction-umbrella.h"
+
+  export *
+  module * { export * }
+}

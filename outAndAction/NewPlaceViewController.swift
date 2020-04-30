@@ -16,14 +16,15 @@ class NewPlaceViewController: UITableViewController {
     @IBOutlet weak var placeLocation: UITextField!
     @IBOutlet weak var placeType: UITextField!
     
-    var newPlace: Place?
     var imageIsChanged = false
+    var currentPlace: Place?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         saveButton.isEnabled = false
         placeName.addTarget(self, action: #selector(textFieldChanged), for: .editingChanged)
+        setupEditScreen()
         
     }
     
@@ -78,15 +79,45 @@ extension NewPlaceViewController: UITextFieldDelegate{
         saveButton.isEnabled = placeName.text!.isEmpty ? false : true
     }
     
-    func saveNewPlace(){
-     newPlace = Place(
+    func savePlace(){
+        
+        let newPlace = Place.init(
             name: placeName.text!,
             location: placeLocation.text,
             type: placeType.text,
-            image: imageIsChanged ? placeImage.image : #imageLiteral(resourceName: "imagePlaceholder")
+            imageData: imageIsChanged ? placeImage.image?.pngData() : #imageLiteral(resourceName: "imagePlaceholder").pngData()
         )
+        if(currentPlace != nil){
+            Repository.updateObject(currentPlace!, newPlace: newPlace)
+        }
+        else {Repository.saveObject(newPlace)}
+        
     }
-
+    
+    private func setupEditScreen(){
+        if(currentPlace != nil){
+            imageIsChanged = true
+            setupNavigationBar()
+            guard let data = currentPlace?.imageData, let image = UIImage(data: data) else {return}
+            placeImage.image = image 
+            placeImage.contentMode = .center
+            placeImage.backgroundColor = .white
+            placeName.text = currentPlace?.name
+            placeLocation.text = currentPlace?.location
+            placeType.text = currentPlace?.type
+            
+        }
+    }
+    
+    private func setupNavigationBar(){
+        if let topItem = navigationController?.navigationBar.topItem{
+            topItem.backBarButtonItem = UIBarButtonItem(title: "", style: .done, target: nil, action: nil)
+        }
+        navigationItem.leftBarButtonItem = nil
+        title = currentPlace?.name
+        saveButton.isEnabled = true
+        
+    }
 }
 
 
